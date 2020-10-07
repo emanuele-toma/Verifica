@@ -1,0 +1,13 @@
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\bin\Debug\netcoreapp3.1\Verifica.exe
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\bin\Debug\netcoreapp3.1\Verifica.deps.json
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\bin\Debug\netcoreapp3.1\Verifica.runtimeconfig.json
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\bin\Debug\netcoreapp3.1\Verifica.runtimeconfig.dev.json
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\bin\Debug\netcoreapp3.1\Verifica.dll
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\bin\Debug\netcoreapp3.1\Verifica.pdb
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.csprojAssemblyReference.cache
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.AssemblyInfoInputs.cache
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.AssemblyInfo.cs
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.csproj.CoreCompileInputs.cache
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.dll
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.pdb
+C:\Users\bhz_ema\source\repos\Verifica\Verifica\obj\Debug\netcoreapp3.1\Verifica.genruntimeconfig.cache
