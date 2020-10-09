@@ -267,7 +267,7 @@ namespace Verifica
                         {
                             Console.Write("Inserisci la categoria dei prodotti da eliminare: ");
                             inputStr = Console.ReadLine();
-                            Console.WriteLine("Vuoi eliminari questi elementi? [S/N]");
+                            Console.WriteLine($"Vuoi eliminari gli elementi nella categoria {inputStr}? [S/N]");
                             if (Console.ReadKey(true).Key == ConsoleKey.S)
                             {
                                 while (i < id)
