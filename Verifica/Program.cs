@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Verifica
 {
@@ -8,6 +8,7 @@ namespace Verifica
         {
             public string nome;
             public string descrizione;
+            public string categoria;
             public decimal prezzo;
             public int id;
         }
@@ -16,6 +17,7 @@ namespace Verifica
             Console.Title = "Gestore catalogo";
 
             int daInserire = default, scelta = default, i = default, input = default, id = default;
+            string inputStr = default;
             bool quit = default, trovato = default;
             Prodotto nuovoProdotto = default;
             Prodotto[] listaProdotti = new Prodotto[1000];
@@ -28,8 +30,9 @@ namespace Verifica
                 Console.WriteLine("#                                                 #");
                 Console.WriteLine("#  1) Aggiungi prodotti                           #");
                 Console.WriteLine("#  2) Modifica prodotti esistenti                 #");
-                Console.WriteLine("#  3) Mostra prodotti                             #");
-                Console.WriteLine("#  4) Elimina prodotti                            #");
+                Console.WriteLine("#  3) Mostra tutti i prodotti                     #");
+                Console.WriteLine("#  4) Cerca per categoria                         #");
+                Console.WriteLine("#  5) Elimina prodotti                            #");
                 Console.WriteLine("#                                                 #");
                 Console.WriteLine("#  0) Esci                                        #");
                 Console.WriteLine("#                                                 #");
@@ -39,7 +42,8 @@ namespace Verifica
                 i = default;
                 input = default;
                 trovato = default;
-                
+                inputStr = default;
+
                 Console.Clear();
 
                 if (scelta == 0)
@@ -58,6 +62,8 @@ namespace Verifica
                         nuovoProdotto.nome = Console.ReadLine();
                         Console.Write("Descr. : ");
                         nuovoProdotto.descrizione = Console.ReadLine();
+                        Console.Write("Categ. : ");
+                        nuovoProdotto.categoria = Console.ReadLine();
                         Console.Write("Prezzo : ");
 
                         nuovoProdotto.prezzo = decimal.Parse(Console.ReadLine());
@@ -88,6 +94,7 @@ namespace Verifica
                         Console.WriteLine("###################################################");
                         Console.WriteLine($"Nome   : {listaProdotti[i].nome}");
                         Console.WriteLine($"Descr. : {listaProdotti[i].descrizione}");
+                        Console.WriteLine($"Categ. : {listaProdotti[i].categoria}");
                         Console.WriteLine($"Prezzo : EUR {listaProdotti[i].prezzo}");
                         Console.WriteLine($"ID     : {listaProdotti[i].id}");
                         Console.WriteLine("###################################################");
@@ -100,6 +107,8 @@ namespace Verifica
                             listaProdotti[i].nome = Console.ReadLine();
                             Console.Write("Descr. : ");
                             listaProdotti[i].descrizione = Console.ReadLine();
+                            Console.Write("Categ. : ");
+                            listaProdotti[i].categoria = Console.ReadLine();
                             Console.Write("Prezzo : ");
                             listaProdotti[i].prezzo = decimal.Parse(Console.ReadLine());
                             Console.Write("ID     : ");
@@ -120,30 +129,56 @@ namespace Verifica
                     Console.WriteLine("Lista dei prodotti nel catalogo:");
                     while (i < listaProdotti.Length)
                     {
-                        if(listaProdotti[i].nome != null)
+                        if (listaProdotti[i].nome != null)
                         {
                             Console.WriteLine("###################################################");
                             Console.WriteLine($"Nome   : {listaProdotti[i].nome}");
                             Console.WriteLine($"Descr. : {listaProdotti[i].descrizione}");
+                            Console.WriteLine($"Categ. : {listaProdotti[i].categoria}");
                             Console.WriteLine($"Prezzo : EUR {listaProdotti[i].prezzo}");
                             Console.WriteLine($"ID     : {listaProdotti[i].id}");
-                        }      
+                        }
                         i++;
 
                     }
                     Console.WriteLine("###################################################");
                     Console.Write("Premi un tasto per tornare al menù...");
                     Console.ReadKey();
-                } else if (scelta == 4)
+                }
+                else if (scelta == 4)
+                {
+                    Console.Write("Inserisci la categoria del prodotto da mostrare: ");
+                    inputStr = Console.ReadLine();
+                    while (i < listaProdotti.Length)
+                    {
+                        if (listaProdotti[i].categoria == inputStr)
+                        {
+                            Console.WriteLine("###################################################");
+                            Console.WriteLine($"Nome   : {listaProdotti[i].nome}");
+                            Console.WriteLine($"Descr. : {listaProdotti[i].descrizione}");
+                            Console.WriteLine($"Categ. : {listaProdotti[i].categoria}");
+                            Console.WriteLine($"Prezzo : EUR {listaProdotti[i].prezzo}");
+                            Console.WriteLine($"ID     : {listaProdotti[i].id}");
+                        }
+                        i++;
+
+                    }
+                    Console.WriteLine("###################################################");
+                    Console.Write("Premi un tasto per tornare al menù...");
+                    Console.ReadKey();
+
+                }
+                else if (scelta == 5)
                 {
                     Console.Write("Inserisci l'id del prodotto da eliminare: ");
                     input = int.Parse(Console.ReadLine());
                     while (i < listaProdotti.Length && !trovato)
                     {
-                        if(listaProdotti[i].id == input)
+                        if (listaProdotti[i].id == input)
                         {
                             trovato = true;
-                        } else
+                        }
+                        else
                         {
                             i++;
                         }
@@ -154,20 +189,23 @@ namespace Verifica
                         Console.WriteLine("###################################################");
                         Console.WriteLine($"Nome   : {listaProdotti[i].nome}");
                         Console.WriteLine($"Descr. : {listaProdotti[i].descrizione}");
+                        Console.WriteLine($"Categ. : {listaProdotti[i].categoria}");
                         Console.WriteLine($"Prezzo : EUR {listaProdotti[i].prezzo}");
                         Console.WriteLine($"ID     : {listaProdotti[i].id}");
                         Console.WriteLine("###################################################");
                         Console.WriteLine("Vuoi eliminare questo elemento? [S/N]");
 
-                        if(Console.ReadKey(true).Key == ConsoleKey.S)
+                        if (Console.ReadKey(true).Key == ConsoleKey.S)
                         {
                             listaProdotti[i].nome = default;
                             listaProdotti[i].descrizione = default;
+                            listaProdotti[i].categoria = default;
                             listaProdotti[i].prezzo = default;
                             listaProdotti[i].id = default;
                             Console.WriteLine($"Prodotto con id {input} eliminato con successo");
                         }
-                    } else
+                    }
+                    else
                     {
                         Console.WriteLine("Nessun prodotto trovato con id " + input);
                     }
