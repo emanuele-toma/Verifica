@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bhz_ema\\source\\repos\\Verifica\\Verifica\\Verifica.csproj",
+      "projectUniqueName": "C:\\Users\\bhz_ema\\Source\\Repos\\emanuele-toma\\Verifica\\Verifica\\Verifica.csproj",
       "projectName": "Verifica",
-      "projectPath": "C:\\Users\\bhz_ema\\source\\repos\\Verifica\\Verifica\\Verifica.csproj",
+      "projectPath": "C:\\Users\\bhz_ema\\Source\\Repos\\emanuele-toma\\Verifica\\Verifica\\Verifica.csproj",
       "packagesPath": "C:\\Users\\bhz_ema\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bhz_ema\\source\\repos\\Verifica\\Verifica\\obj\\",
+      "outputPath": "C:\\Users\\bhz_ema\\Source\\Repos\\emanuele-toma\\Verifica\\Verifica\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\bhz_ema\\AppData\\Roaming\\NuGet\\NuGet.Config",
